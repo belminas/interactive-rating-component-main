@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Interactive rating component</title>
+  <script type="text/javascript">
+    function fn1()
+    {
+      let fn1=document.getElementById("choice1");
+      let fn2=document.getElementById("choice2");
+      let fn3=document.getElementById("choice3");
+      let fn4=document.getElementById("choice4");
+      let fn5=document.getElementById("choice5");
+      let titleText=document.getElementById("title");
+      let subtitleText=document.getElementById("subtitle");
+      let cardText1=document.getElementById("cardtext1");
+      let cardText2=document.getElementById("cardtext2");
+      const btns1=document.getElementById("button1");
+      const btns2=document.getElementById("button2");
+      const btns3=document.getElementById("button3");
+      const btns4=document.getElementById("button4");
+      const btns5=document.getElementById("button5");
+      let imageBanner=document.getElementById("image");
+      if(fn1.checked){
+        subtitleText.innerText="You selected 1 out of 5"
+        cardText1.innerText="Thank you!"
+        cardText2.innerText="We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!"
+      }
+      else if(fn2.checked){
+        subtitleText.innerText="You selected 2 out of 5"
+        cardText1.innerText="Thank you!"
+        cardText2.innerText="We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!"
+       
+      }
+      else if(fn3.checked){
+        subtitleText.innerText="You selected 3 out of 5"
+        cardText1.innerText="Thank you!"
+        cardText2.innerText="We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!"      
+      }
+      else if(fn4.checked){
+        subtitleText.innerText="You selected 4 out of 5"
+        cardText1.innerText="Thank you!"
+        cardText2.innerText="We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!"
+      }
+      else if(fn5.checked){
+        subtitleText.innerText="You selected 5 out of 5"
+        cardText1.innerText="Thank you!"
+        cardText2.innerText="We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!" 
+      }
+      const sub=document.getElementById("submit");
+      sub.parentNode.removeChild(sub);
+      imageBanner.src="illustration-thank-you.svg"
+      imageBanner.style="margin-left:15%;"
+      subtitleText.style="font-family: 'Overpass', sans-serif;font-size: 14px;color:hsl(25, 97%, 53%); padding-top:8%; ";
+      subtitleText.classList="text-center";
+      cardText1.style="font-family: 'Overpass', sans-serif;font-size: 23px;color:white; padding-top:2%";
+      cardText1.classList="text-center";
+      cardText2.classList="text-center";
+      btns1.parentNode.removeChild(btns1);
+      btns2.parentNode.removeChild(btns2);
+      btns3.parentNode.removeChild(btns3);
+      btns4.parentNode.removeChild(btns4);
+      btns5.parentNode.removeChild(btns5);
+    }
+    </script> 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(0, 0%, 97%); }
+    .radio-button{
+      background-color:hsl(216, 12%, 54%) ;
+      color: white;
+    }
+    body{
+      background-color: rgb(77, 65, 65);
+      display: grid;
+      place-items: start center;
+      margin-top: 25%;
+    }
+    
+    .radio-button:hover{
+      background-color:hsl(25, 97%, 53%) ;
+    }
+    #cardtext1{
+      color: white;
+      font-family: 'Overpass', sans-serif;
+      font-size: 14px;
+      color:hsl(217, 12%, 63%) ;
+    }
+    #cardtext2{
+      font-family: 'Overpass', sans-serif;
+      font-size: 14px;
+      color:hsl(217, 12%, 63%) ;
+    }
+    
+    #subtitle{
+      font-family: 'Overpass', sans-serif;
+      font-size: 23px;
+      text-transform: bold;
+    }
+    #subtitle{
+      color: white;
+    }
+    #card{
+      background-color: hsl(213, 19%, 18%)
+    }
+    #choice{
+      padding-bottom: 5%;
+    }
+    .button-submit{
+      margin-top:8%;
+      width: 275px; 
+      background-color:hsl(25, 97%, 53%) ;
+      text-transform: uppercase;
+      font-family: 'Overpass', sans-serif;
+      font-size: 16px;
+    }
+    .button-submit:hover{
+      background-color: white;
+      color:hsl(25, 97%, 53%) ;
+    }
+  </style>
+</head>
+<body>
+  <div id="card" class="card rounded-4" style="width: 350px; padding: 2%;">
+    <div class="card-body">
+      <p id="title" class="card-title"><img id="image" src="icon-star.svg" 
+        alt=" Litle shining star"></p>
+      <p id="subtitle" class="card-subtitle mb-2 ">
+        How did we do?</p>
+      <p id="cardtext1" class="card-text">Please let us know how we did with your support request. 
+        All feedback is appreciated 
+        to help us improve our offering!</p>
+      <p id="cardtext2" class="card-text"></p>
+          <div id="button1" class="btn-group me-3 button" role="group" aria-label="RadioGroup">
+            <input type="radio" class="btn-check" name="btnradio" id="choice1" autocomplete="off" checked>
+            <label class="btn radio-button rounded-circle" for="choice1">1</label>
+          </div>
+          <div id="button2" class="btn-group me-3" role="group" aria-label="Second group">
+            <input type="radio" class="btn-check" name="btnradio" id="choice2" autocomplete="off">
+            <label class="btn radio-button rounded-circle" for="choice2">2</label>
+          </div>
+          <div id="button3" class="btn-group me-3" role="group" aria-label="Third group">
+            <input type="radio" class="btn-check" name="btnradio" id="choice3" autocomplete="off">
+            <label class="btn radio-button rounded-circle" for="choice3">3</label>
+          </div>
+          <div id="button4" class="btn-group me-3" role="group" aria-label="Forthgroup">
+            <input type="radio" class="btn-check" name="btnradio" id="choice4" autocomplete="off">
+            <label class="btn radio-button rounded-circle" for="choice4">4</label>
+          </div>
+          <div id="button5" class="btn-group me-3" role="group" aria-label="Fifth group">
+            <input type="radio" class="btn-check" name="btnradio" id="choice5" autocomplete="off">
+            <label class="btn radio-button rounded-circle radio-button" for="choice5">5</label>
+          </div>
+            <input id="submit"  onclick="fn1()" class="btn button-submit btn-primary rounded-5" type="submit" value="Submit">
+      </div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Belmin Trokic</a>.
+  </div>
+</body>
+</html>
